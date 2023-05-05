@@ -25,6 +25,7 @@ search = browser.find_element(By.CSS_SELECTOR, '#query')
 search.click()
 time.sleep(3)
 search.send_keys('청파동 조용한 카페')
+time.sleep(2)
 search.send_keys(Keys.ENTER)
 time.sleep(3)
 # view창 더보기
@@ -57,6 +58,7 @@ while True:
 
 lists = browser.find_elements(
     By.CSS_SELECTOR, '.total_tit')
+
 for list in lists:
     title = list.text
     print(title)
